@@ -42,6 +42,6 @@ app.use("/user", userRouter);
 app.use("/votes", votesRouter);
 
 const PORT = process.env.PORT || 8080;
-app.listen(8080, () => {
+app.listen(PORT, () => {
   console.log(`server started on http://localhost:${PORT}/`);
 });
