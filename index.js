@@ -8,7 +8,7 @@ const app = express();
 votesRouter.use(express.urlencoded({ extended: true }));
 votesRouter.use(express.json());
 
-app.use("/", (req, res) => {
+app.get("/", (req, res) => {
   res.send("voting app is working");
 });
 
