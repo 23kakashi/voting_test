@@ -8,6 +8,10 @@ const app = express();
 votesRouter.use(express.urlencoded({ extended: true }));
 votesRouter.use(express.json());
 
+app.use("/", (req, res) => {
+  res.send("voting app is working");
+});
+
 app.get("/db", (req, res) => {
   fs.readFile("./db.json", { encoding: "utf-8" }, (err, data) => {
     let parsed = JSON.parse(data);
